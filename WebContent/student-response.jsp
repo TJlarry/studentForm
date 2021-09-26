@@ -4,12 +4,23 @@
 </head>
 
 <body>
+<h1> CONFIRMATION PAGE </h1>
 
 	The Student is confirmed:
 	<%=request.getParameter("firstName")%>
-	<%=request.getParameter("lastName")%><br /> Student country:
-	<%=request.getParameter("Country")%><br /> Student favorite
-	programming languages:
+	<%=request.getParameter("lastName")%><br />
+	  
+	 Student sex identity:
+	<%=request.getParameter("sex") %><br />
+	
+	Student Age:
+	<%= request.getParameter("Agegroup") %><br/>
+	
+	 Student country:
+	<%=request.getParameter("Country")%><br /> 
+	
+	Student favorite programming languages:
+	
 	<ul>
 		<%
 			String[] langs = request.getParameterValues("favoriteLanguage");
@@ -22,6 +33,8 @@
 		}
 		%>
 	</ul>
+	
+	<a href="student-form.html"> Return to homepage</a>
 
 </body>
 </html>
